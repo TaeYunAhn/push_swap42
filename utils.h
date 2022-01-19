@@ -37,5 +37,22 @@ typedef struct s_array
 	size_t			size;
 }					t_array;
 
+static size_t space_skipper(const char *str);
+long long ft_atoll(const char *str);
+void *ft_memset(void *b, int c, size_t len);
+size_t ft_strlcpy(char *dst, const char *src, size_t len);
+int ft_strlen(const char *str);
+static	int	strChecker(char *new);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+t_list	*initList(void);
+int	addBack(t_list *tList, int value);
+t_node	*popBack(t_list *list);
+static	void	clearNodes(t_list *list, t_node **curNode);
+void	clearList(t_list **list);
+void	addBackNode(t_list *tList, t_node *curNode);
+t_stack *initStack(char name);
+int	sa(t_stack *aStack);
+int	sb(t_stack *bStack);
+
 
 #endif

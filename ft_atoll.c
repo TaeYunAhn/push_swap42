@@ -36,5 +36,5 @@ long long ft_atoll(const char *str)
 		ret += ((long long)(*(str + idx) - '0')) * minus;
 		idx++;
 	}
-	return (ret)
+	return (ret);
 }

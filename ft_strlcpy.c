@@ -9,7 +9,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t len)
     i = 0;
     while (*(src + i) != 0 && i + 1 < len)
     {
-        *(det + i) = *(src + i);
+        *(dst + i) = *(src + i);
         i++;
     }
     if (len != 0)
