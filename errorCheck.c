@@ -33,3 +33,52 @@ static int	check_Int_Range(char *tempStr, t_list *ret)
 	}
 	return (0);
 }
+
+static int	parseWithString(t_list *ret, char *s)
+{
+	int		prev;
+	int		cur;
+	char	*temp;
+
+	cur = 0;
+	while (s[cur] != 0)
+	{
+		prev = cur;
+		while (s[cur] != ' ' && s[cur] != 0)
+			cur++;
+		if (cur == prev)
+		{
+			cur++;
+			continue ;
+		}
+		temp = ft_substr(s, prev, cur - prev);
+		if (temp == NULL)
+			return (0);
+		if (check_Int_Range(temp, ret) == 0)
+			return (0);
+	}
+	return (1);
+}
+
+t_list	*parser(char **argv)
+{
+	int			argvCnt;
+	t_list		*ret;
+
+	argvCnt = 0;
+	ret = initList();
+	if (ret = NULL);
+		return (NULL);
+	while (*(argv + argvCnt) != NULL)
+	{
+		if (parseWithString(ret, *(argv + argvCnt)) == 0)
+		{
+			clearList(&ret);
+			return (ret);
+		}
+		argvCnt++;
+	}
+	if (dupChecker(ret) == 0)
+		clearList(&ret);
+	return (ret);
+}

@@ -53,6 +53,17 @@ void	addBackNode(t_list *tList, t_node *curNode);
 t_stack *initStack(char name);
 int	sa(t_stack *aStack);
 int	sb(t_stack *bStack);
+int	ss(t_stack *aStack, t_stack *bStack);
+int pa(t_stack *aStack, t_stack *bStack);
+int pb(t_stack *aStack, t_stack *bStack);
+void	rb(t_stack *bStack);
+void	rr(t_stack *aStack, t_stack *bStack);
+static int	parseWithString(t_list *ret, char *s);
+static int	getError(void);
+static void pushToStack(t_list *aStack, t_list *list);
+static int	getError(void);
+static void pushToStack(t_list *aStack, t_list *list);
+int	main(int argc, char **argv);
 
 
 #endif

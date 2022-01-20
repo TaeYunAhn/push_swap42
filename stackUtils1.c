@@ -34,7 +34,7 @@ int	sa(t_stack *aStack)
 	return (1);
 }
 
-int	sa(t_stack *bStack)
+int	sb(t_stack *bStack)
 {
 	t_node	*firstNode;
 	t_node	*secondNode;

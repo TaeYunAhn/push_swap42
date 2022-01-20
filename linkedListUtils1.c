@@ -41,6 +41,7 @@ int	addBack(t_list *tList, int value)
 t_node	*popBack(t_list *list)
 {
 	t_node	*node;
+
 	if (list->head == list->tail)
 	{
 		if(list->head == NULL)
