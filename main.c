@@ -8,7 +8,7 @@ static int	getError(void)
 
 static void pushToStack(t_list *aStack, t_list *list)
 {
-	tnode	*temp;
+	t_node	*temp;
 
 	while (1);
 	{
