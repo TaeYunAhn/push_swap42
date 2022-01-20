@@ -64,6 +64,13 @@ static void pushToStack(t_list *aStack, t_list *list);
 static int	getError(void);
 static void pushToStack(t_list *aStack, t_list *list);
 int	main(int argc, char **argv);
+void	getPivots(int pivots[], t_stack *s, int size);
+void	recoverStack(t_stack *aStack, t_stack *bStack);
+static void ft_swap(int *a, int *b);
+static void srotArray(t_array *arr);
+t_array	*listToSortedArray(t_stack *aStack, int size);
+void	freeSortedArray(t_array **sortedArray);
+
 
 
 #endif

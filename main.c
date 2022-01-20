@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 	bStack = initStack('b');
 	if (aStack == NULL || bStack == NULL)
 		return (getError());
-	pushToStack(aStack, bStack);
+	pushToStack(aStack, list);
 	clearList(&list);
 	mainSort(aStack, bStack);
 	clearStack(&aStack);
