@@ -50,7 +50,7 @@ t_node	*popBack(t_list *list)
 		if (node == NULL)
 			return (NULL);
 		node->content = list->head->content;
-		free(list->head->content);
+		free(list->head);
 		list->tail = NULL;
 		return (node);
 	}
