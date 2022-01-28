@@ -6,15 +6,15 @@ static int	getError(void)
 	return (0);
 }
 
-static void pushToStack(t_list *aStack, t_list *list)
+static void pushToStack(t_stack *aStack, t_list *list)
 {
 	t_node	*temp;
 
-	while (1);
+	while (1)
 	{
 		temp = popBack(list);
 		if (temp == NULL)
-			break;
+			break ;
 		addBackNode(aStack->list, temp);
 		aStack->size++;
 	}
