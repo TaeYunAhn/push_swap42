@@ -1,6 +1,6 @@
-#include "utils.h"
+#include  "utils.h"
 
-void	recoverStack(t_stack *aStack, t_stack *bStack)
+void	recoverStack(t_stack *aStack, t_stack *bStack, int raCnt, int rbCnt)
 {
 	while (raCnt > 0 || rbCnt > 0)
 	{

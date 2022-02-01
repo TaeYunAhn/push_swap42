@@ -1,6 +1,6 @@
-#include "utils.h"
+#include  "utils.h"
 
-static void		caseOne(t_stack *aStack)
+static void	caseOne(t_stack *aStack)
 {
 	t_node		*aTail;
 
@@ -16,7 +16,7 @@ static void		caseOne(t_stack *aStack)
 	rra(aStack);
 }
 
-static void		caseTwo(t_stack *aStack)
+static void	caseTwo(t_stack *aStack)
 {
 	sa(aStack);
 	ra(aStack);
@@ -25,7 +25,7 @@ static void		caseTwo(t_stack *aStack)
 	sa(aStack);
 }
 
-static void		caseThree(t_stack *aStack)
+static void	caseThree(t_stack *aStack)
 {
 	ra(aStack);
 	sa(aStack);
@@ -33,7 +33,7 @@ static void		caseThree(t_stack *aStack)
 	sa(aStack);
 }
 
-static void		caseFour(t_stack *aStack)
+static void	caseFour(t_stack *aStack)
 {
 	ra(aStack);
 	sa(aStack);

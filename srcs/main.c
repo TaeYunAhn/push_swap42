@@ -1,4 +1,4 @@
-#include "utils.h"
+#include  "utils.h"
 
 static int	getError(void)
 {
@@ -6,7 +6,7 @@ static int	getError(void)
 	return (0);
 }
 
-static void pushToStack(t_stack *aStack, t_list *list)
+static void	pushToStack(t_stack *aStack, t_list *list)
 {
 	t_node	*temp;
 
@@ -40,4 +40,5 @@ int	main(int argc, char **argv)
 	mainSort(aStack, bStack);
 	clearStack(&aStack);
 	clearStack(&bStack);
+	system("leacks main.out");
 }

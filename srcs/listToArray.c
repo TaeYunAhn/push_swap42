@@ -1,28 +1,28 @@
-#include "utils.h"
+#include  "utils.h"
 
-static void ft_swap(int *a, int *b)
+static void	ft_swap(int *a, int *b)
 {
-	int temp;
+	int	temp;
 
 	temp = *a;
 	*a = *b;
 	*b = temp;
 }
 
-static void srotArray(t_array *arr)
+static void	srotArray(t_array *arr)
 {
 	size_t		i;
 	size_t		j;
 	int			minval;
 	int			mindex;
 
-	i =  0;
+	i = 0;
 	while (i < arr->size)
 	{
 		minval = *(arr->array + i);
 		mindex = i;
 		j = i + 1;
-		while (j< arr->size)
+		while (j < arr->size)
 		{
 			if (minval > *(arr->array + j))
 			{
@@ -61,6 +61,6 @@ t_array	*listToSortedArray(t_stack *aStack, int size)
 
 void	freeSortedArray(t_array **sortedArray)
 {
-	free(*sortedArray->array)
-	free(*sortedArray);
+	free((void **)&((*sortedArray)->array));
+	free((void **)sortedArray);
 }

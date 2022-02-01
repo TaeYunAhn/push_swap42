@@ -1,6 +1,6 @@
-#include "utils.h"
+#include  "utils.h"
 
-static void		nextARecurse(t_stack *aStack, t_stack *bStack, int counts[4])
+static void	nextARecurse(t_stack *aStack, t_stack *bStack, int counts[4])
 {
 	recoverStack(aStack, bStack, counts[RA], counts[RB]);
 	if (isStackSorted(aStack, ASC, counts[RA]) == 0)
@@ -9,7 +9,7 @@ static void		nextARecurse(t_stack *aStack, t_stack *bStack, int counts[4])
 	sortB(aStack, bStack, counts[PUSH] - counts[RB]);
 }
 
-static void		endARecurse(t_stack *aStack, int size)
+static void	endARecurse(t_stack *aStack, int size)
 {
 	t_node		*aTop;
 
@@ -20,7 +20,7 @@ static void		endARecurse(t_stack *aStack, int size)
 		sa(aStack);
 }
 
-static void		moveStack(t_stack *aStack, t_stack *bStack,
+static void	moveStack(t_stack *aStack, t_stack *bStack,
 				int pivots[2], int counts[4])
 {
 	t_node		*aTop;
@@ -41,7 +41,7 @@ static void		moveStack(t_stack *aStack, t_stack *bStack,
 			{
 				counts[3]--;
 				counts[RA]++;
-				rr(aStack, bStack)
+				rr(aStack, bStack);
 			}
 			else
 				rb(bStack);
@@ -64,7 +64,7 @@ void	sortA(t_stack *aStack, t_stack *bStack, int size)
 		endARecurse(aStack, size);
 		return ;
 	}
-	count[3] = size;
+	counts[3] = size;
 	while (counts[3]-- > 0)
 		moveStack(aStack, bStack, pivots, counts);
 	nextARecurse(aStack, bStack, counts);

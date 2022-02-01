@@ -1,4 +1,4 @@
-#include "utils.h"
+#include  "utils.h"
 
 static	int	strChecker(char *new)
 {
@@ -19,7 +19,7 @@ static	int	strChecker(char *new)
 	return (1);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*new;
 	size_t	max_len;
@@ -47,4 +47,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	return (new);
 }
-

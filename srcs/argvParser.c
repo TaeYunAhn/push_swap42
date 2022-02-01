@@ -1,6 +1,6 @@
-#include "utils.h"
+#include  "utils.h"
 
-static	int	dupChecker(t_list *list)
+static int	dupChecker(t_list *list)
 {
 	t_node		*iCur;
 	t_node		*jCur;
@@ -13,16 +13,16 @@ static	int	dupChecker(t_list *list)
 		{
 			if (iCur->content == jCur->content)
 				return (0);
-			jCur = iCur->next;
+			jCur = jCur->next;
 		}
 		iCur = iCur->next;
 	}
-	return(1);
+	return (1);
 }
 
 static int	check_Int_Range(char *tempStr, t_list *ret)
 {
-	long long val;
+	long long	val;
 
 	val = ft_atoll(tempStr);
 	free(tempStr);
@@ -67,7 +67,7 @@ t_list	*parser(char **argv)
 
 	argvCnt = 0;
 	ret = initList();
-	if (ret = NULL);
+	if (ret == NULL)
 		return (NULL);
 	while (*(argv + argvCnt) != NULL)
 	{

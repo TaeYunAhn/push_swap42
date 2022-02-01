@@ -1,4 +1,4 @@
-#include "utils.h"
+#include  "utils.h"
 
 void	rra(t_stack *aStack)
 {
@@ -15,7 +15,7 @@ void	rra(t_stack *aStack)
 
 void	rrb(t_stack *bStack)
 {
-	if(bStack->name != 'b')
+	if (bStack->name != 'b')
 		return ;
 	if (bStack->size <= 1)
 		return ;
@@ -28,15 +28,29 @@ void	rrb(t_stack *bStack)
 
 void	rrr(t_stack *aStack, t_stack *bStack)
 {
-	rra(t_stack *aStack);
-	rrb(t_stack *bStack);
-	write(1, "rrr\n, 4");
+	write(1, "rrr\n", 4);
+	if (bStack->name != 'b')
+		return ;
+	if (bStack->size <= 1)
+		return ;
+	if (bStack->list->head == bStack->list->tail)
+		return ;
+	bStack->list->tail = bStack->list->head;
+	bStack->list->head = bStack->list->head->next;
+	if (aStack->name != 'a')
+		return ;
+	if (aStack->size <= 1)
+		return ;
+	if (aStack->list->head == aStack->list->tail)
+		return ;
+	aStack->list->tail = aStack->list->head;
+	aStack->list->head = aStack->list->head->next;
 }
 
 void	clearStack(t_stack **st)
 {
 	clearList(&((*st)->list));
-	free(st);
+	free((void **)st);
 }
 
 int	isStackSorted(t_stack *st, int sortType, int n)

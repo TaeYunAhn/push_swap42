@@ -21,11 +21,11 @@ typedef struct s_list
 typedef struct s_node
 {
 	int				content;
-	struct s_node 	*next;
+	struct s_node	*next;
 	struct s_node	*prev;
 }					t_node;
 
-typedef	struct s_stack
+typedef struct s_stack
 {
 	struct s_list	*list;
 	char			name;
@@ -82,7 +82,5 @@ void				recoverStack(t_stack *aStack, t_stack *bStack,
 						int raCnt, int rbCnt);
 void				sortAThree(t_stack *aStack);
 void				sortBThree(t_stack *aStack, t_stack *bStack);
-
-
 
 #endif

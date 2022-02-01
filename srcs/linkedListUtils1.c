@@ -1,8 +1,8 @@
-#include "utils.h"
+#include  "utils.h"
 
 t_list	*initList(void)
 {
-	t_list *tList;
+	t_list	*tList;
 
 	tList = NULL;
 	tList = malloc(sizeof(t_list));
@@ -44,7 +44,7 @@ t_node	*popBack(t_list *list)
 
 	if (list->head == list->tail)
 	{
-		if(list->head == NULL)
+		if (list->head == NULL)
 			return (NULL);
 		node = malloc(sizeof(t_node));
 		if (node == NULL)
@@ -54,7 +54,7 @@ t_node	*popBack(t_list *list)
 		list->tail = NULL;
 		return (node);
 	}
-	node = list->tail;
+	node = (list->tail);
 	list->tail->prev->next = list->head;
 	list->tail->next->prev = list->tail->prev;
 	list->tail = list->tail->prev;

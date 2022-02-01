@@ -1,8 +1,8 @@
-#include "utils.h"
+#include  "utils.h"
 
-static size_t space_skipper(const char *str)
+static size_t	space_skipper(const char *str)
 {
-	size_t idx;
+	size_t	idx;
 
 	idx = 0;
 	while (*(str + idx))
@@ -10,16 +10,16 @@ static size_t space_skipper(const char *str)
 		if (*(str + idx) == 32 || (9 <= *(str + idx) && *(str + idx) <= 13))
 			idx++;
 		else
-			break;
+			break ;
 	}
 	return (idx);
 }
 
-long long ft_atoll(const char *str)
+long long	ft_atoll(const char *str)
 {
-	long long ret;
-	long long minus;
-	size_t idx;
+	long long	ret;
+	long long	minus;
+	size_t		idx;
 
 	idx = space_skipper(str);
 	ret = 0;

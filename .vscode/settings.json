@@ -1,4 +1,21 @@
 {
+  "editor.tabSize": 4,
+  "editor.insertSpaces": false,
+  "editor.renderWhitespace": "all",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "codam-norminette-3.command": "norminette",
+  "codam-norminette-3.fileregex": "\\.[ch]$",
+  "codam-norminette-3.ignoreErrors": [],
+  "C_Cpp.errorSquiggles": "Disabled",
+  "files.associations": {
+    "utils.h": "c",
+    "myloc.h": "c",
+    "cstdlib": "cpp",
+    "locale": "cpp",
+    "ostream": "cpp",
+    "new": "cpp"
+  },
   "C_Cpp_Runner.cCompilerPath": "/usr/bin/clang",
   "C_Cpp_Runner.cppCompilerPath": "/usr/bin/clang++",
   "C_Cpp_Runner.debuggerPath": "/usr/bin/lldb",
@@ -15,6 +32,5 @@
   "C_Cpp_Runner.cppStandard": "",
   "C_Cpp_Runner.excludeSearch": [],
   "C_Cpp_Runner.enableWarnings": true,
-  "C_Cpp_Runner.warningsAsError": false,
-  "C_Cpp.errorSquiggles": "Disabled"
+  "C_Cpp_Runner.warningsAsError": false
 }

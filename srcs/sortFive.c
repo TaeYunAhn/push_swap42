@@ -1,4 +1,4 @@
-#include "utils.h"
+#include  "utils.h"
 
 static int	getFivePivot(t_stack *aStack)
 {
@@ -13,10 +13,10 @@ static int	getFivePivot(t_stack *aStack)
 	return (pivot);
 }
 
-static int	sortFive(t_stack *aStack, t_stack *bStack)
+void	sortFive(t_stack *aStack, t_stack *bStack)
 {
 	int		i;
-	int		piovot;
+	int		pivot;
 
 	if (isStackSorted(aStack, ASC, 5))
 		return ;
@@ -25,7 +25,7 @@ static int	sortFive(t_stack *aStack, t_stack *bStack)
 	while (i < 5)
 	{
 		if (aStack->list->tail->content < pivot)
-			pb(aStack, bSatck)
+			pb(aStack, bStack);
 		else
 			ra(aStack);
 		i++;

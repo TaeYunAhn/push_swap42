@@ -1,19 +1,20 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
-      "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "/Users/tahn/pushswap",
-      "environment": [],
-      "program": "/Users/tahn/pushswap/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "lldb",
-      "miDebuggerPath": "/usr/bin/lldb",
-      "externalConsole": false
-    }
-  ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "gcc - Build and debug active file",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${fileDirname}/${fileBasenameNoExtension}.out",
+			"args": [
+				"8 1 4 6 3 2 5 7"
+			],
+			"stopAtEntry": false,
+			"cwd": "${fileDirname}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "lldb",
+			"preLaunchTask": "C/C++: gcc build active file"
+		}
+	]
 }

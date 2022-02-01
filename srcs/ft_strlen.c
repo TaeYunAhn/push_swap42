@@ -1,14 +1,14 @@
-#include "utils.h"
+#include  "utils.h"
 
-int ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-    int len;
+	int	len;
 
-    len = 0;
-    while (*str != 0)
-    {
-        len++;
-        str++;
-    }
-    return (str_size);
+	len = 0;
+	while (*str != 0)
+	{
+		len++;
+		str++;
+	}
+	return (len);
 }

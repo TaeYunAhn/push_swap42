@@ -3,8 +3,8 @@ CFLAGS = -Wall -Werror -Wextra
 
 NAME = push_swap
 
-SRCS_DIR = ./SRCS
-SRCS_NAME = main.c\
+SRCS_DIR = ./srcs
+SRCS_NAME = main.c \
 			linkedListUtils1.c linkedListUtils2.c \
 			stackUtils1.c stackUtils2.c stackUtils3.c \
 			argvParser.c ft_atoll.c ft_strlcpy.c ft_strlen.c ft_substr.c \
@@ -15,7 +15,7 @@ SRCS = $(addprefix $(SRCS_DIR)/, $(SRCS_NAME))
 
 OBJS = $(SRCS:.c=.o)
 
-INCLUDES = ./INCLUDES
+INCLUDES = includes/
 
 $(NAME) : $(OBJS)
 	$(CC) $(CFLAGS) -I$(INCLUDES) $^ -o $@
