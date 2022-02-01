@@ -31,8 +31,8 @@ int	addBack(t_list *tList, int value)
 	{
 		tList->tail->next = curNode;
 		tList->head->prev = curNode;
-		curNode->next = tList->head;
 		curNode->prev = tList->tail;
+		curNode->next = tList->head;
 		tList->tail = curNode;
 	}
 	return (1);
