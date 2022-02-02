@@ -51,6 +51,7 @@ t_node	*popBack(t_list *list)
 			return (NULL);
 		node->content = list->head->content;
 		free(list->head);
+		list->head = NULL;
 		list->tail = NULL;
 		return (node);
 	}
@@ -65,13 +66,14 @@ static	void	clearNodes(t_list *list, t_node **curNode)
 {
 	if (*curNode == list->tail)
 	{
-		free(curNode);
+		free(*curNode);
 		return ;
 	}
 	else
 	{
 		clearNodes(list, &((*curNode)->next));
 		free(*curNode);
+		curNode = NULL;
 	}
 }
 
@@ -80,4 +82,5 @@ void	clearList(t_list **list)
 	if ((*list)->head != NULL)
 		clearNodes(*list, &(*list)->head);
 	free(*list);
+	*list = NULL;
 }

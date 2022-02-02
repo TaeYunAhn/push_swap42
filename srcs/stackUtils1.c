@@ -11,6 +11,7 @@ t_stack	*initStack(char name)
 	if (stack->list == NULL)
 	{
 		free(stack);
+		stack = NULL;
 		return (NULL);
 	}
 	stack->name = name;

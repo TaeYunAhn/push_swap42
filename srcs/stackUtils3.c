@@ -50,7 +50,6 @@ void	rrr(t_stack *aStack, t_stack *bStack)
 void	clearStack(t_stack **st)
 {
 	clearList(&((*st)->list));
-	free((void **)st);
 }
 
 int	isStackSorted(t_stack *st, int sortType, int n)

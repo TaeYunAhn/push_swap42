@@ -62,5 +62,4 @@ t_array	*listToSortedArray(t_stack *aStack, int size)
 void	freeSortedArray(t_array **sortedArray)
 {
 	free((void **)&((*sortedArray)->array));
-	free((void **)sortedArray);
 }
