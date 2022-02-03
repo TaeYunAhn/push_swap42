@@ -10,7 +10,7 @@ t_stack	*initStack(char name)
 	stack->list = initList();
 	if (stack->list == NULL)
 	{
-		free(stack);
+		free_and_null((void **)&stack);
 		stack = NULL;
 		return (NULL);
 	}

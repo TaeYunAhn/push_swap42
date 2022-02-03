@@ -4,7 +4,7 @@ CFLAGS = -Wall -Werror -Wextra
 NAME = push_swap
 
 SRCS_DIR = ./srcs
-SRCS_NAME = main.c \
+SRCS_NAME = main.c free_and_null.c\
 			linkedListUtils1.c linkedListUtils2.c \
 			stackUtils1.c stackUtils2.c stackUtils3.c \
 			argvParser.c ft_atoll.c ft_strlcpy.c ft_strlen.c ft_substr.c \

@@ -25,7 +25,7 @@ static int	check_Int_Range(char *tempStr, t_list *ret)
 	long long	val;
 
 	val = ft_atoll(tempStr);
-	free(tempStr);
+	free_and_null((void **)&tempStr);
 	if (-2147483648 <= val && val <= 2147483647)
 	{
 		addBack(ret, val);

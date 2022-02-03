@@ -9,7 +9,7 @@ static void	ft_swap(int *a, int *b)
 	*b = temp;
 }
 
-static void	srotArray(t_array *arr)
+static void	sortArray(t_array *arr)
 {
 	size_t		i;
 	size_t		j;
@@ -50,16 +50,17 @@ t_array	*listToSortedArray(t_stack *aStack, int size)
 	cur = aStack->list->tail;
 	while (i < size)
 	{
-		*(ret->array + 1) = cur->content;
+		*(ret->array + i) = cur->content;
 		cur = cur->prev;
 		i++;
 	}
 	ret->size = size;
-	srotArray(ret);
+	sortArray(ret);
 	return (ret);
 }
 
 void	freeSortedArray(t_array **sortedArray)
 {
-	free((void **)&((*sortedArray)->array));
+	free_and_null((void **)&((*sortedArray)->array));
+	free_and_null((void **)sortedArray);
 }

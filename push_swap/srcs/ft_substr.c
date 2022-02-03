@@ -11,7 +11,7 @@ static	int	strChecker(char *new)
 	{
 		if ('0' > new[i] || new[i] > '9')
 		{
-			free(new);
+			free_and_null((void **)&new);
 			return (0);
 		}
 		i++;

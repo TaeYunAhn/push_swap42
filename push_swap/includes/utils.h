@@ -82,5 +82,6 @@ void				recoverStack(t_stack *aStack, t_stack *bStack,
 						int raCnt, int rbCnt);
 void				sortAThree(t_stack *aStack);
 void				sortBThree(t_stack *aStack, t_stack *bStack);
+void				free_and_null(void **ptr);
 
 #endif

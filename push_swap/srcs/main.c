@@ -40,5 +40,4 @@ int	main(int argc, char **argv)
 	mainSort(aStack, bStack);
 	clearStack(&aStack);
 	clearStack(&bStack);
-	system("leacks main.out");
 }
